@@ -1,15 +1,136 @@
 
 
+import java.util.ArrayDeque;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Deque;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.PriorityQueue;
+import java.util.Queue;
+import java.util.Stack;
 import java.util.Vector;
 
 public class JavaCollection {
 	public static void main(String[] args)
 	{
-		ListEx();
+	
+		queueEx();
+	}
+	
+	
+	
+	public static void queueEx()
+	{
+		Queue<Integer> queue= new LinkedList<Integer>(); // 큐 객체는 LinkedList로 인스턴스화 
+		///add / offer
+		//poll / remove / clear 
+		// peek / toString 
+		
+		
+		queue.add(5);
+		queue.add(1);
+		queue.add(9);
+		queue.offer(11);
+		// add와 offer는 동일하게 데이터 추가 역할
+		// add는 데이터 공간이 부족해서 추가하지 못할때 예외(IllegerStateException) 던짐 
+		
+		System.out.println("////큐////");
+		System.out.println(queue.toString());
+		System.out.println(queue.remove());// queue.poll과 같음, remove는 큐가 비어있으면 NosuchElementException 발생 
+		System.out.println(queue.peek()); // queue.element와 같음 
+		System.out.println(queue.toString());
+		while(queue.iterator().hasNext())
+		{
+			System.out.println(queue.poll());
+		}
+		System.out.println(queue.toString());
+		
+		System.out.println("////큐////");
+		
+		
+		
+		PriorityQueue<Integer> pqueue = new PriorityQueue<Integer>();
+		System.out.println("////우선순위큐////");
+		pqueue.offer(6);
+		pqueue.offer(1);
+		pqueue.offer(3);
+		pqueue.offer(122);
+		pqueue.offer(111);
+		pqueue.offer(123);
+		
+		System.out.println(pqueue.toString());
+		System.out.println(pqueue.peek());
+		System.out.println(pqueue.remove());
+		System.out.println(pqueue.poll());
+		System.out.println(pqueue.toString());
+		while(pqueue.iterator().hasNext())
+		{
+			System.out.println(pqueue.poll());
+		}
+		System.out.println(pqueue.toString());
+		System.out.println("////우선순위큐////");
+		
+		
+		
+		Deque<Integer> deque = new LinkedList<Integer>();//연결리스트 덱 
+		Deque<String> deque_a = new ArrayDeque<String>();//배열 덱
+		// front / rear 양방향으로 삽입 , 삭제 가능한 자료구조 
+		System.out.println("////덱////");
+		deque.offer(1);
+		deque.offer(2);
+		deque.offerFirst(7);//첫번쨰 요소로 삽입
+		deque.offerLast(3);//마지막 요소로 삽입
+		
+		System.out.println(deque.toString());
+		
+		deque.remove(); // remove는 가장 앞 요소 삭제+반환 
+		
+		System.out.println(deque.toString());
+		System.out.println(deque.peekFirst());
+		System.out.println(deque.peekLast());
+		deque.removeFirst();
+		deque.removeLast();
+		//deque.poll();
+		//deque.pollFirst();
+		//deque.pollLast();
+		
+		
+		System.out.println(deque.toString());
+		System.out.println("////덱////");
+	}
+	
+	public static void stackEx()
+	{
+		Stack<Integer> stack = new Stack<Integer>();
+		
+		stack.push(1);
+		stack.push(2);
+		stack.push(3);
+		stack.push(999);
+		
+		System.out.println("///스택///");
+		System.out.println(stack.toString()); // 요소들을 출력 
+		System.out.println(stack.peek());
+		System.out.println(stack.pop());
+		
+		if(stack.contains(3))
+		{
+			System.out.println("3이 스택에 존재");
+		}
+		System.out.println("////스택////");
+	}
+	
+	
+	
+	public static void mapEx()
+	{
+		
+	}
+	
+	public static void setEx()
+	{
+		
 	}
 	
 	
