@@ -20,6 +20,8 @@ public class JavaCollection {
 	
 	
 	
+	
+	
 	public static void queueEx()
 	{
 		Queue<Integer> queue= new LinkedList<Integer>(); // 큐 객체는 LinkedList로 인스턴스화 
