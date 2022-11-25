@@ -40,19 +40,23 @@ public class JavaWrapperClass {
 	
 	public static void intEx()
 	{
-		int intg = 3;
+		
 		Integer intger = 4;
+		Integer intger2 = 10;
+		
+		int number = intger + intger2;
+		System.out.println(number);
+		
+		
 		//Intger intger = new Intger(4);
 		int temp = 7;
 	
 		
-		System.out.println(intg+" & " + intger);
+
 		
-		intg = intger;
 		//intg = intger.intValue();
 		//자동 언박싱 - 객체로부터 변수를 꺼내어 일반 변수에 저장 
-		System.out.println(intg+" & " + intger);
-		
+
 		
 		intger = temp;
 		//자동 박싱 - 객체에 일반변수를 담아 저장 
