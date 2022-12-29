@@ -68,7 +68,7 @@ public class PipelineTest {
 		list2.add(new Person("안혜영"));
 		list2.add(new Person("김귤"));
 		
-		Stream<Person> st = list2.stream();s
+		Stream<Person> st = list2.stream();
 		st.forEach((person)->{
 			if(person.getName().charAt(0) == '김')
 			{
