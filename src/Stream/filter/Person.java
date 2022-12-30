@@ -37,4 +37,11 @@ public class Person {
 			return false;
 		}
 	}
+	
+	
+	@Override
+	public String toString() {
+		// TODO Auto-generated method stub
+		return "NAME : " + name + " / SEX : " + sex;
+	}
 }
